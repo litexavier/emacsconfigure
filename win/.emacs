@@ -1,0 +1,8 @@
+(add-to-list 'load-path (expand-file-name "~/.emacs.d")) 
+(require 'google-c-style) 
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook 'google-make-newline-indent)
+(add-to-list 'auto-mode-alist (cons "\\.h$" #'c++-mode))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/elpa/company-0.8.2/"))
+(autoload 'company-mode "company" nil t)
+(setq default-buffer-file-coding-system 'utf-8)
